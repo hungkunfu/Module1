@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng kí Học Viên</title>
+</head>
+
+<body>
+    <style>
+        #warpper {
+            background: wheat;
+            width: 400px;
+        }
+
+        #warpper h3 {
+            background: tomato;
+            padding: 2px 5px;
+        }
+
+        .button {
+            padding: 10px 45px
+        }
+
+        .box {
+            padding: 3px 15px;
+        }
+
+        label {
+            padding: 12px;
+        }
+
+        .box0 {
+            padding: 0px 13px;
+        }
+
+        .box1 {
+            padding: 5px 24px;
+        }
+
+        .box2 {
+            padding: 2px 18px;
+        }
+
+        .box3 {
+            padding: 5px 28px;
+        }
+
+        .box4 {
+            padding: 2px 13px;
+        }
+    </style>
+    <div id="warpper">
+        <h3>Đăng Ký Học Viên</h3>
+        <label class="box0" for=""> Học và tên</label>
+        <input type="text" name="hocvaten" placeholder="họ và tên"><br><br>
+        <label class="box" for=""> Ngày sinh</label>
+        <input type="Date" name="date"><br><br>
+        <label class="box" for=""> Giới tính</label>
+        <input type="radio" name="genred">
+        <label class="box" for="">Nam</label>
+        <input type="radio" name="genred">
+        <label class="box" for="">Nữ</label><br><br>
+        <label class="box1" for="">Địa chỉ</label>
+        <input type="text" name="diachi" placeholder="địa chỉ"><br><br>
+        <div class="selection">
+            <label class="box2" for=""> Chọn lớp</label>
+            <select name="Chọn lớp" id="lop">
+                <option value="">-Chọn Lớp-</option>
+                <option value=""> PHP</option>
+                <option value=""> java</option>
+                <option value=""> Javascrip</option>
+                <option value=""> Nodejs</option>
+            </select>
+
+        </div><br>
+        <label class="box3" for=""> Email</label>
+        <input type="Email" name="email" placeholder="Nhập email"><br><br>
+        <label class="box4" for=""> Điện thoại</label>
+        <input type="text" name="dienthoai" id="" placeholder="số điện thoại"><br><br>
+        <div class="button">
+            <button class="button" >Đăng kí</button>
+            <button class="button">Nhập lại</button>
+
+        </div>
+
+
+    </div>
+</body>
+
+</html>

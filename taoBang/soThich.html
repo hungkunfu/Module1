@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sở thích của bạn</title>
+</head>
+
+<body>
+    <style>
+        #wr-warpper {
+            padding: 1px 35%;
+        }
+
+        #warpper {
+            width: 370px;
+            height: auto;
+            background: wheat;
+        }
+
+        .form {
+            text-align: left;
+            padding: 12px;
+        }
+
+        .titel {
+            background: red;
+            text-align: center;
+        }
+
+        .titel h2 {
+            color: white;
+        }
+
+        #box {
+            padding: 5px;
+        }
+
+
+        .box0 {
+            float: left;
+            padding: 3px 11px;
+            color: royalblue;
+        }
+
+        .box1 {
+            float: left;
+        }
+
+        .box2 {
+            float: left;
+        }
+
+        .button {
+            padding: 10px 75px;
+        }
+
+        .mail {
+            padding-right: 24px;
+        }
+
+        .form label {
+            color: royalblue;
+        }
+
+        label {
+            color: red;
+        }
+    </style>
+    <div id="wr-warpper">
+        <div id="warpper">
+            <div class="titel">
+                <h2>Sở Thích Của Bạn</h2>
+            </div>
+            <form action="" class="form">
+                <label for="hovaten">Họ và tên</label>
+                <input type="text" name="hovaten" placeholder="họ và tên"><br><br>
+                <label class="mail" for="email">Email</label>
+                <input type="Email" name="email" placeholder="email" >
+            </form>
+            <form action="">
+                <label class="box0" for="">Sở thích</label>
+            </form>
+            <div id="box">
+                <div class="box1">
+                    <input type="checkbox" name="checkbox">
+                    <label for="">Thể thao</label><br>
+                    <input type="checkbox" name="checkbox">
+                    <label for="">Lướt web</label><br>
+                    <input type="checkbox" name="checkbox">
+                    <label for="">Du lịch</label>
+                </div>
+                <div class="box2">
+                    <input type="checkbox" name="checkbox">
+                    <label for="">Âm nhạc</label><br>
+                    <input type="checkbox" name="checkbox">
+                    <label for="">Chơi game</label>
+                </div>
+                <div id="box3">
+                    <input type="checkbox" name="checkbox">
+                    <label for="">Đọc sách</label><br>
+                    <input type="checkbox" name="checkbox">
+                    <label for="">Điện ảnh</label>
+                </div><br>
+                <div class="button">
+                    <button type="button" onclick=""> Gửi thông tin</button>
+                    <button type="button" onclick=""> Nhập lại</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
