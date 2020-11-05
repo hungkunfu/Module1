@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính điểm trung bình </title>
+</head>
+<body>
+    <div id="">
+        <script>
+            
+            var inputLy;
+            var inputHoa;
+            var inputToan;
+            inputLy = prompt('nhập vào điểm LÝ:');
+            var Ly = parseFloat(inputLy);
+            while(isNaN(Ly) | Ly > 10){
+                inputLy = prompt('Bạn nhập sai:');
+                Ly= parseFloat(inputLy); 
+            }
+            
+            inputHoa = prompt('nhập vào điểm Hóa:');
+            var Hoa = parseFloat(inputHoa);
+           while(isNaN(Hoa) | Hoa > 10){
+               inputHoa = prompt('Bạn nhập điểm sai nhập lại');
+               Hoa = parseFloat(inputHoa);
+           }
+           inputToan = prompt('nhập vào điểm Toán');
+           var Toan =parseFloat(inputToan);
+           
+           while(isNaN(Toan) | Toan > 10){
+               inputToan = prompt('Bạn nhập sai mời bạn nhập lại')
+               Toan = parseFloat(inputToan);
+           }
+            
+           var DTB = (parseFloat((Toan + Ly + Hoa) / 3)).toFixed(1);
+            document.write('Điểm Lý = ',inputLy );
+
+            document.write('Điểm hóa = ',inputHoa);
+
+            document.write('Điểm Toán = ',inputToan);
+
+            document.write('Điểm trung bình ba môn =', DTB);
+        </script>
+    </div>
+    
+</body>
+</html>
