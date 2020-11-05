@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Các hàm hiển thị</title>
+</head>
+<body>
+    <div id="warpper">
+        <button type="button" onclick="mess()"> Alert </button>
+
+    </div>
+    <script>
+        function mess() {
+            alert('Xin chào ');
+        }
+    </script>
+    <br><br>
+    <div id="document">
+        <button type="button" onclick="docuMent()"> Document.get</button>
+        <p id="document"></p>
+        <script>
+            function docuMent(){
+                document.getElementById('document').innerHTML = 'Xin chào';
+            }
+        </script>
+    </div>
+    <div id="write">
+        <button type="button" onclick="Write();"> document.write</button>
+            <script>
+                function Write() {
+                    document.write('xin chào');
+                    
+                }
+            </script>
+
+    </div>
+    <div id="consolelog">
+        <p id="consoleg"></p>
+        <button type="button" onclick="conso();"> console.log</button>
+        <script>
+            function conso() {
+                console.log('xin chào');
+                
+            }
+        </script>
+
+    </div>
+
+    
+</body>
+</html>
