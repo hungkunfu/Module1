@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ứng dụng chuyển đổi  tiền </title>
+</head>
+<body>
+    <style>
+        th {
+            padding: 12px;
+        }
+    </style>
+    <table>
+        <tr>
+        <form action="">
+            <th>
+                <h1>Amount </h1>
+                <input type="text" id="input" name="input" value="">
+                
+               
+           </th>
+           <th>
+            <h1>From Currency</h1>
+                <select name="from" id="from">
+                    
+                    <option value="USD" id="vn">USD</option>
+                    <option value="VND">VND</option>
+                </select>
+           </th>
+           <th>
+            <h1>To Currency</h1>
+                <select name="to" id="to">
+                    
+                    <option value="VND">VND</option>
+                    <option value="USD">USD</option>
+                </select>
+           </th>
+           <th>
+               <h1>Kết quả</h1>
+             <button type="button" onclick="convert();" value="result">convert</button>
+               
+           </th>
+        </form>
+    </table>
+      <div id="result">Result</div>
+    </div>
+    <script>
+        let input = document.getElementById('input');
+        let from = document.getElementById('from');
+        let to = document.getElementById('to');
+        let result = document.getElementById('result')
+        let Price = {
+                        VND: 23000,
+                        USD: 1
+                      
+                         };
+    
+                function convert() {
+                    // console.log('')
+                let fromto = from.value + "_" + to.value;
+                switch (fromto) {
+                case "VND_VND":
+                    result.innerHTML = "=" + input.value + " " + "VNĐ";
+                    break;
+                case "VND_USD":
+                    result.innerHTML = "=" + input.value / 23000 + " " + "USD";
+                    break;
+                case "USD_VND":
+                    result.innerHTML = "=" + input.value * 23000 + " " + "VND";
+                    break;
+                case "USD_USD":
+                    result.innerHTML = "=" + input.value + " " + "USD";
+                    break;
+                }
+            }
+
+                
+            
+
+        // var inputĐola;
+        // var vn = 23.000;
+        // inputĐola = prompt('Xác Nhận Lại Sô Tiền Cần Chuyển ')
+        //  var $ = parseFloat(inputĐola);
+        //  var Chuyen = parseFloat($ * vn).toFixed(3);
+        //  document.write('tiền vừa chuyển = ', Chuyen);
+        
+        
+    </script>
+    
+</table>
+</body>
+</html>
