@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm tra năm nhuận</title>
+</head>
+<body>
+    <div id="warpper">
+        <script>
+            var inputYear = prompt('Nhập vào năm để kiểm tra : ');
+            var year = inputYear;
+            if (year % 4 == 0) {
+                if (year % 100 == 0) {
+                    if (year % 400 == 0) {
+                         alert(year + " Là Năm Nhuận");
+             } else 
+                     {
+
+                        alert(year + " Không Phải Năm Nhuận");
+
+                     }
+                 } else
+
+                        {
+                         alert(year + " Là Năm Nhuận");
+                        }
+
+                     } else 
+                          {
+                              alert(year + " Không Phải Là Năm Nhuận");
+                }
+        </script>
+
+    </div>
+    
+</body>
+</html>
