@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chỉ số BMI của con người </title>
+</head>
+
+<body>
+    <div id="warpper">
+        <table>
+            <tr>
+                <td>Nhập vào chiều cao :</td>
+                <td> <input type="text" id="H" value=""></td>
+
+            </tr>
+            <tr>
+                <td>Nhập vào Cân nặng : </td>
+                <td><input type="text" id="KG" value=""></td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <button style="padding: 10px;" type="button" onclick="chiSo();" value="result">Chỉ Số BMI</button>
+                <button style="padding: 10px;" type="button" onclick="convert();" value="result">Trạng thái</button>
+
+            </tr>
+            <!-- <tr>
+                <button type="button" onclick="Trangthai();" value="result">Trạng thái</button>
+                <div id="re"></div>
+            </tr> -->
+
+        </table>
+        <div id="result"></div>
+
+    </div>
+    <SCript>
+        let H = document.getElementById('H');
+        let KG = document.getElementById('KG');
+        let result = document.getElementById('result');
+        let BMI = document.getElementById('BMI');
+        function convert() {
+
+            result.innerHTML =  (KG.value / (H.value * H.value)).toFixed(2);
+            if (result.innerHTML < 18)
+                result.innerHTML = ("Thiếu cân , Ốm");
+            else if (result.innerHTML < 25)
+                result.innerHTML = ("Bình thường");
+            else if (result.innerHTML < 30)
+                result.innerHTML = ("Thừa Cân , Béo");
+            else
+                result.innerHTML = ("Béo Phì");
+        }
+        function chiSo() {
+
+            result.innerHTML = (KG.value / (H.value * H.value)).toFixed(2);
+        }
+
+
+
+    </SCript>
+
+
+</body>
+
+</html>
