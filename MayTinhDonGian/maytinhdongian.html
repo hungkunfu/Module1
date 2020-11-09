@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Máy tính đơn giản </title>
+</head>
+
+<body>
+    <div id="warpper">
+        <form action="">
+            <table>
+                <tr>
+                    <th><input type="text" id="input1"></th>
+                    <th><input type="text" id="input2"></th>
+                </tr>
+
+            </table>
+            <table>
+                <tr>
+                    <td style="padding: 15px;"> <button type="button" onclick="cong();">Cộng</button></td>
+                    <td style="padding: 15px;"> <button type="button" onclick="tru();">Trừ</button></td>
+                    <td style="padding: 15px;"> <button type="button" onclick="nhan();">Nhân</button></td>
+                    <td style="padding: 15px;"> <button type="button" onclick="chia();">Chia</button></td>
+                </tr>
+            </table>
+        </form>
+
+    </div>
+    <div id="result">
+
+    </div>
+    <script>
+        let input1 = document.getElementById('input1');
+        let input2 = document.getElementById('input2');
+        let result = document.getElementById('result');
+        function cong() {
+            let input3 = parseFloat(input1.value);
+            let input4 = parseFloat(input2.value);
+            let tong = parseFloat(input3 + input4);
+            result.innerHTML = "=" + tong;
+        }
+        function tru() {
+            let input3 = parseFloat(input1.value);
+            let input4 = parseFloat(input2.value);
+            let tru = parseFloat(input3 - input4);
+            result.innerHTML = "=" +  tru;
+        }
+        function nhan() {
+            let input3 = parseFloat(input1.value);
+            let input4 = parseFloat(input2.value);
+            let nhan = parseFloat(input3 * input4);
+            result.innerHTML = "=" +  nhan;
+        }
+        function chia() {
+            let input3 = parseFloat(input1.value);
+            let input4 = parseFloat(input2.value);
+            let chia = parseFloat(input3 / input4).toFixed(1);
+            result.innerHTML = "=" +  chia;
+        }
+    </script>
+
+</body>
+
+</html>
