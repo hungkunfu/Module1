@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onload="power();">
+    <style>
+        table {
+            position: fixed;
+            left: 0;
+            top: 400px;
+            border-radius: 50%;
+            background-color: chocolate;
+        }
+
+        button {
+            background-color: turquoise;
+            border: 0px solid;
+            color: white;
+            border-radius: 5px;
+        }
+    </style>
+    <div>
+        <img src="./ball1.jpg" alt="" id="ball">
+        <table>
+            <tr>
+                <td></td>
+                <td><button onclick="moveUp();" id=""> ▲</button></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><button onclick="moveLeft();" id="right">◄</button></td>
+                <td></td>
+                <td><button onclick="moveRghit()">►</button></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button onclick="moveDow();">▼</button></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        const step = 25;
+        const xoay = 40;
+        var deg = 0;
+        function power() {
+            let ball = document.getElementById("ball");
+            ball.style.width = "150px";
+            ball.style.height = "150px";
+            ball.style.position = "absolute";
+            ball.style.left = 0;
+            ball.style.top = 0;
+            ball.style.transition = '.3s';
+            window.addEventListener("keydown", controllBall);
+
+        }
+        function moveRghit() {
+            let ball = document.getElementById('ball');
+            ball.style.transform = `rotate(${deg += xoay}deg)`;
+            let ballWidth = parseInt(ball.style.width);
+            let ballPosX = parseInt(ball.style.left);
+            if (ballPosX + ballWidth + step < window.innerWidth) {
+                ball.style.left = `${ballPosX + step}px`;
+            }
+        }
+        function moveLeft() {
+            let ball = document.getElementById("ball");
+            ball.style.transform = `rotate(${deg -= xoay}deg)`;
+            let ballPosX = parseInt(ball.style.left);
+            if (ballPosX > 0) {
+                ball.style.left = `${ballPosX - step}px`;
+            }
+        }
+        function moveDow() {
+            let ball = document.getElementById('ball');
+            ball.style.transform = `rotate(${deg += xoay}deg)`;
+            let ballWidth = parseInt(ball.style.height);
+            let ballPosy = parseInt(ball.style.top);
+            if (ballPosy + ballWidth + step < window.innerHeight) {
+                ball.style.top = `${ballPosy + step}px`;
+            }
+        }
+        function moveUp() {
+            let ball = document.getElementById('ball');
+            ball.style.transform = `rotate(${deg += xoay}deg)`;
+            let ballPosy = parseInt(ball.style.top);
+            if (ballPosy > 0) {
+                ball.style.top = `${ballPosy - step}px`;
+            }
+        }
+        function controllBall(event) {
+            switch (event.keyCode) {
+                //move right
+                case 39:
+                    {
+                        moveRghit();
+                        break;
+                    }
+                //move left
+                case 37:
+                    {
+                        moveLeft();
+                        break;
+                    }
+                //move down
+                case 40:
+                    {
+                        moveDow();
+                        break;
+                    }
+                //move up
+                case 38:
+                    {
+                        moveUp();
+                        break;
+                    }
+                default:
+                    {
+                        alert('please using one in four keys Left, Right, Up and Down');
+                    }
+            }
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>
