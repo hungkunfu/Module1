@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Từ Điển</title>
+</head>
+
+<body>
+    <h1>Từ Điển Anh Việt</h1>
+    <form name="TuDien">
+        <input type="text" value="" id="input">
+        <input type="button" value=" Change" onclick="tracuu();">
+    </form>
+    <div id="result"></div>
+    <script>
+        let input = document.getElementById('input');
+        let Anh = ['ENGLISH', 'DOG', 'CAT', 'HOW ARE YOU', 'AGIAN'];
+        let Viet = ['Tiếng Anh', 'con chó', 'Con Mèo', 'Bạn có khỏe Không', 'Hẹn gặp Lại'];
+        function tracuu() {
+            let input = document.getElementById('input');
+            tu = document.forms["TuDien"]["input"].value;
+            vt = vt = Anh.indexOf(tu.toUpperCase());
+            if (vt != -1) {
+                document.getElementById("result").innerHTML = Viet[vt];
+            } else {
+                document.getElementById("result").innerHTML = "Không tìm thấy";
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
