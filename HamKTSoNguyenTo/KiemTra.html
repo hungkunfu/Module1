@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Kiểm tra số nguyên tố </h1>
+    <script>
+        let number = parseInt(prompt('Nhập vào số để kiểm tra'));
+        var N = 2;
+        if ( kiemTra(number)) {
+            alert(`${number}` + ' ' + 'là một số nguyên tố');
+        } else {
+            alert(`${number}` + ' ' + 'không là số nguyên tố')
+        }
+        function kiemTra(N) {
+            if (N < 2) {
+                return false;
+            }
+            for (let i = 2; i < N; i++) {
+                if (N % i == 0) {
+                    return false;
+
+                }
+            } return true;
+        }
+
+    </script>
+</body>
+
+</html>
