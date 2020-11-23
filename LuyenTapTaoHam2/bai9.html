@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 9</title>
+</head>
+
+<body>
+    <script>
+        function Bai9() {
+            let input = prompt('Nhập vào chuỗi kí tự');
+            let char = prompt('Nhập vào kí tự cần kiểm tra xem có trong chuỗi không');
+            alert("số lần xuất hiện của ký tự " + char + " là: " + kiemtra(char, input));
+            function kiemtra(char, input) {
+                // let n = input.length;
+                let c = 0;
+                for (let value of input) {
+                    if (value == char) {
+                        c++;
+                    }
+                }
+                if (c == 0) {
+                    return -1;
+                } else {
+                    return c;
+                }
+            }
+        }
+        Bai9(); 
+    </script>
+
+</body>
+
+</html>

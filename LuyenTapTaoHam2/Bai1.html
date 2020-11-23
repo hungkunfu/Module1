@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giai thừa</title>
+</head>
+
+<body>
+    <script>
+        function giaThua() {
+            let input = +prompt('Nhập Vào số để tính giai thừa:');
+            alert('bình phương của' + ' ' + `${input}` + " " + 'là' + " " + `${tinhGiaiThua(input)}`)
+            function tinhGiaiThua(input) {
+                let num = input;
+                return num * num;
+            }
+        }
+        giaThua();
+    </script>
+
+</body>
+
+</html>
