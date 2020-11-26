@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container">
+        <h2>Nhập vào chiều dài</h2>
+        <input type="text" id="width"><br>
+        <h2>Nhập vào chiều rộng</h2>
+        <input type="text" id="hight"><br><br>
+        <button onclick="Sum()">Kết quả </button>
+
+    </div>
+    <p id="chuvidientich"></p>
+    <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+    </canvas>
+    <script>
+        function Rectangle(width, hight) {
+            this.width = width;
+            this.hight = hight;
+            this.getDt = function () {
+                return this.width * this.hight
+            }
+            this.getCv = function () {
+                return (this.width + this.hight) * 2;
+            }
+            this.getrandomhex = function () {
+                return Math.floor(Math.random() * 255);
+            }
+            this.ramdom = function () {
+                var red = this.getrandomhex();
+                var green = this.getrandomhex();
+                var blue = this.getrandomhex();
+                return "rgb(" + red + "," + blue + "," + green + ")";
+            }
+            this.Draw = function () {
+                var c = document.getElementById("myCanvas");
+                var coler = this.ramdom();
+                let ctx = c.getContext("2d");
+                ctx.beginPath();
+                ctx.fillStyle = coler;
+                ctx.fillRect(50, 50, this.hight, this.width);
+                ctx.rect(50, 50, this.hight, this.width);
+                ctx.stroke();
+            }
+            this.Reset = function () {
+                var c = document.getElementById("myCanvas");
+                let ctx = c.getContext("2d");
+                ctx.beginPath();
+                ctx.clearRect(0, 0, c.width, c.height);
+                ctx.stroke();
+            }
+
+
+        };
+
+
+        function Sum() {
+            let width = document.getElementById('width').value;
+            let hight = document.getElementById('hight').value;
+            let ractangle = new Rectangle(width, hight)
+            ractangle.Reset();
+            ractangle.Draw();
+            Dt = ractangle.getDt();
+            Cv = ractangle.getCv();
+            result = "Diện tích: " + Dt + "<br>" + "Chu vi: " + Cv;
+            document.getElementById("chuvidientich").innerHTML = result;
+
+
+        }
+
+    </script>
+
+</body>
+
+</html>
