@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xây dựng lớp hình tròn</title>
+</head>
+
+<body>
+    <button onclick="show()">Kết quả</button>
+    <P id="bankinhchuvi"></P>
+    <script>
+        function Circle(radius) {
+            this.radius = radius;
+            this.getRadius = function () {
+                return this.radius;
+            }
+            this.getArea = function () {
+                return Math.PI * this.radius * this.radius;
+            }
+
+        }
+        function show() {
+            let circle = new Circle(5);
+            let bk = circle.getRadius();
+            let dt = circle.getArea().toFixed(3);
+            result = "Diện tích: " + dt + "<br>" + "Bán Kính: " + bk;
+             document.getElementById('bankinhchuvi').innerHTML = result;
+        }
+
+    </script>
+
+</body>
+
+</html>
