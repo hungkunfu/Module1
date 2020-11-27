@@ -14,7 +14,7 @@ body {
   top: 0;
   position: fixed;
   width: 100%;
-  z-index: 9999px;
+  z-index: 9999;
   /* neo lại menu */
 }
 .container {
