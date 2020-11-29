@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function kiemtra() {
+            let input = prompt('Nhập vào chuỗi cần kiểm tra : ');
+            while(input == ''){
+                alert('Mời Bạn Nhập Thông Tin')
+                input = prompt('Nhập vào chuỗi cần kiểm tra :');
+                // break;
+            }
+            input = input.trim();
+            input = input.toLowerCase().replace(/\s+/g, ' ');
+            let newInput = input.split('');
+            newInput[0] = newInput[0].toUpperCase();
+            for (let i = 1; i < newInput.length; i++) {
+                if (newInput[i] == ' ') {
+                    newInput[i + 1] = newInput[i + 1].toUpperCase();
+                }
+            }
+
+            alert(newInput.join(''));
+        }
+        kiemtra();
+    </script>
+
+</body>
+
+</html>
