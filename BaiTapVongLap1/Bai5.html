@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 5</title>
+</head>
+
+<body>
+    <script>
+        let fib = [];
+        fib[0] = 0;
+        fib[1] = 1;
+        let tongFib = 1;
+        for (let i = 2; i <= 20; i++) {
+            fib[i] = fib[i - 2] + fib[i - 1];
+            tongFib += fib[i];
+            // document.write(fib[i] + '<br>');
+        }
+        document.write(tongFib);
+    </script>
+
+</body>
+
+</html>

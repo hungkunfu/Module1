@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 3</title>
+</head>
+
+<body>
+    <script>
+        var i;
+        var fib = []; // khởi tạo mảng
+
+        fib[0] = 0;
+        fib[1] = 1;
+        for (i = 2; i <= 20; i++) {
+            // Số fibonacci tiếp theo = trước + một trước trước đó
+            fib[i] = fib[i - 2] + fib[i - 1];
+            document.write(fib[i] + '<br>');
+
+        }
+    </script>
+
+</body>
+
+</html>
